@@ -4,7 +4,6 @@ const ftc = process.argv.slice(2);
 const request = require('request');
 const fs = require("fs")
 request(ftc[0], (error, response, body) => {
-
   fs.writeFile(ftc[1], body, 'utf8', () => {
     let fsize = 0;
     fs.stat(ftc[1], (err, stats) => {
